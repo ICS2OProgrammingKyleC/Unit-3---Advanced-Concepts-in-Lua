@@ -2,7 +2,7 @@
 --
 -- level1_screen.lua
 -- Created by: Gil Robern
--- Modified by: Your Name
+-- Modified by: kyle christensen
 -- Date: Month Day, Year
 -- Description: This is the level 1 screen of the game.
 -----------------------------------------------------------------------------------------

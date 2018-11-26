@@ -96,7 +96,7 @@ local function CheckPoints()
         composer.gotoScene("you_win")
 
         --play you win sound
-        --youWinSoundChannel = audio.play(youWinSound)
+        youWinSoundChannel = audio.play(youWinSound)
     end
 end
 

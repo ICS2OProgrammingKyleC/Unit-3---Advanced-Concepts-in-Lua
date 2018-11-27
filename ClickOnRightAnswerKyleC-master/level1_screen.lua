@@ -79,6 +79,22 @@ local level1Text
 -- Boolean variable that states if user clicked the answer or not
 local alreadyClickedAnswer = false
 
+-- background music
+local bkgMusic = audio.loadSound("Sounds/level1Music.wav")
+local bkgMusicChannel
+
+bkgMusicChannel = audio.play(bkgMusic)
+
+-- youlose music
+local youLoseSound = audio.loadSound("Sounds/Kids Booing.mp3")
+local youLoseSoundChannel
+
+
+
+-- background music
+local youWinSound = audio.loadSound("Sounds/youWinSound.wav")
+local youWinSoundChannel
+
 
 -----------------------------------------------------------------------------------------
 -- SOUND
@@ -97,6 +113,7 @@ local function CheckPoints()
 
         --play you win sound
         youWinSoundChannel = audio.play(youWinSound)
+        audio.stop(bkgMusicChannel)
     end
 end
 
@@ -192,6 +209,7 @@ local function RestartScene()
     -- if they have 0 lives, go to the You Lose screen
     if (lives == 0) then
         composer.gotoScene("you_lose")
+        youLoseSoundChannel = audio.play(youLoseSound)
     else 
 
         DisplayAddEquation()
